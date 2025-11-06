@@ -50,9 +50,8 @@ public class bankFeatures {
         return lastName;
     }
 
-    public int addMoney () {
+    public int addMoney (int moneyAdded) {
 
-        int moneyAdded;
 
         System.out.print( getFirstName() +  " How much would like to add: " );
         moneyAdded = keyboard.nextInt();
@@ -71,9 +70,8 @@ public class bankFeatures {
 
     }
 
-    public int withdrawnMoney () {
+    public int withdrawnMoney (int withDrawnMoney) {
 
-        int withDrawnMoney;
 
         System.out.print( getFirstName() +  " How much would like to withdrawn: " );
         withDrawnMoney = keyboard.nextInt();
@@ -92,6 +90,13 @@ public class bankFeatures {
 
         return (int)initialDeposit;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Account Holder: " + firstName + " " + lastName +
+                "\nDate of Birth: " + dateOfBirth+
+                "\nCurrent Balance: $" + initialDeposit + "\n";
     }
 
 

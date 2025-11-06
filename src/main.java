@@ -1,14 +1,28 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main (String [] args) {
 
 
-        bankFeatures user1 = new bankFeatures("Elhadj" , "Bah" , 1998 , 1000);
+        user mainProgram = new user();
+
+        System.out.println("Create users");
+        Scanner keyboard = new Scanner(System.in);
+        int userInput = 0;
+        
+        while (userInput != 1) {
+            mainProgram.newUser();
+            System.out.println("Do you want more users");
+            
+            userInput = keyboard.nextInt();
+            
+        }
+
+        mainProgram.sysAdmin();
 
 
-        user1.addMoney();
-        user1.withdrawnMoney();
-        System.out.println(user1.getInitialDeposit());
+
 
     }
 
