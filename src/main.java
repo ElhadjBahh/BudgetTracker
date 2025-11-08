@@ -16,10 +16,12 @@ public class main {
             System.out.println("Do you want more users");
             
             userInput = keyboard.nextInt();
+            keyboard.nextLine();
+
             
         }
 
-        mainProgram.sysAdmin();
+        mainProgram.returningUser();
 
 
 

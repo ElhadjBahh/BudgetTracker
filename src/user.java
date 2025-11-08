@@ -22,8 +22,6 @@ public class user {
 
 
 
-
-
     }
 
     public ArrayList<bankFeatures> newUser () {
@@ -61,16 +59,32 @@ public class user {
         }
 
 
-
-
-
         return bankFeaturesNav;
 
     }
 
     public void returningUser () {
 
+        String userName;
 
+
+        for (bankFeatures lookup : bankFeaturesNav) {
+
+
+            System.out.println("Welcome back.");
+            System.out.println("Enter your first name: ");
+            keyboard.nextLine();
+            userName = keyboard.nextLine();
+
+            if (lookup.getFirstName().equals(userName)) {
+
+
+                System.out.println("Welcome back " + lookup.getFirstName());
+            }
+
+
+
+        }
 
     }
 
