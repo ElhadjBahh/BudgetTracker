@@ -1,32 +1,18 @@
-import java.util.Scanner;
+
 
 public class main {
 
     public static void main (String [] args) {
 
 
-        user mainProgram = new user();
-
-        System.out.println("Create users");
-        Scanner keyboard = new Scanner(System.in);
-        int userInput = 0;
-        
-        while (userInput != 1) {
-            mainProgram.newUser();
-            System.out.println("Do you want more users");
-            
-            userInput = keyboard.nextInt();
-            keyboard.nextLine();
-
-            
-        }
-
-        mainProgram.returningUser();
-
-
+        menuNavigation login = new menuNavigation();
+        login.start();
 
 
     }
+
+
+
 
 
 
