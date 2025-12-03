@@ -53,9 +53,6 @@ public class bankFeatures {
     public int addMoney (int moneyAdded) {
 
 
-        System.out.print( getFirstName() +  " How much would like to add: " );
-        moneyAdded = keyboard.nextInt();
-
 
         while (moneyAdded <= 0 ) {
 
@@ -72,9 +69,6 @@ public class bankFeatures {
 
     public int withdrawnMoney (int withDrawnMoney) {
 
-
-        System.out.print( getFirstName() +  " How much would like to withdrawn: " );
-        withDrawnMoney = keyboard.nextInt();
 
         if (withDrawnMoney > initialDeposit ) {
 

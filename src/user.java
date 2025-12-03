@@ -23,6 +23,8 @@ public class user {
             System.out.println("1. View all users ");
             System.out.println("2. Register user");
             System.out.println("3. Remove users");
+            System.out.println("0. Return to main menu");
+
 
             userInput = keyboard.nextInt();
             keyboard.nextLine();
@@ -36,10 +38,34 @@ public class user {
 
                     System.out.println(it.next());
                 }
+                 break;
 
 
                 case 2:
                     sysAdminNewUser();
+                    break;
+
+
+                case 3:
+
+
+                    for (int i = 0; i < bankFeaturesNav.size(); i++) {
+
+
+                        System.out.println(i + ". : " + bankFeaturesNav.get(i).getFirstName());
+
+                    }
+
+                    System.out.println();
+                    System.out.println("Enter the number of Who you would like to remove");
+
+                    userInput = keyboard.nextInt();
+                    keyboard.nextLine();
+
+
+                    System.out.println(bankFeaturesNav.remove(userInput).getFirstName() + " was removed");
+
+
 
 
                 case 0:
@@ -62,13 +88,14 @@ public class user {
 
         System.out.println("Take control over your money - Enter your full name: ");
         firstName = keyboard.nextLine();
-        lastName = keyboard.nextLine();
 
         System.out.println("Enter your DOB: ");
         DOB = keyboard.nextInt();
+        keyboard.nextLine();
 
         System.out.println("Enter your initial deposit: ");
         startMoney = keyboard.nextInt();
+        keyboard.nextLine();
 
 
 
@@ -97,31 +124,7 @@ public class user {
 
     public void returningUser () {
 
-        String userName;
 
-
-        for (bankFeatures lookup : bankFeaturesNav) {
-
-
-            System.out.println("Welcome back.");
-            System.out.println("Enter your first name: ");
-            keyboard.nextLine();
-            userName = keyboard.nextLine();
-
-            if (lookup.getFirstName().equals(userName)) {
-
-
-                System.out.println("Welcome back " + lookup.getFirstName());
-            }
-
-            else {
-
-                System.out.println("User not found");
-            }
-
-
-
-        }
 
     }
 
@@ -143,6 +146,19 @@ public class user {
             bankFeaturesNav.add(user);
 
         }
+
+
+    }
+
+    public void UsermenuOptions () {
+
+        System.out.println("Press the following numbers." );
+        System.out.println("1. Add money");
+        System.out.println("2. Withdraw money");
+        System.out.println("3. View transaction");
+        System.out.println("4. Add expense");
+
+        System.out.println("0. Exit");
 
 
     }
