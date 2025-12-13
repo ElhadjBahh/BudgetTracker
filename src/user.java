@@ -1,3 +1,4 @@
+import javax.xml.parsers.SAXParser;
 import java.util.*;
 
 public class user {
@@ -48,24 +49,7 @@ public class user {
 
                 case 3:
 
-
-                    for (int i = 0; i < bankFeaturesNav.size(); i++) {
-
-
-                        System.out.println(i + ". : " + bankFeaturesNav.get(i).getFirstName());
-
-                    }
-
-                    System.out.println();
-                    System.out.println("Enter the number of Who you would like to remove");
-
-                    userInput = keyboard.nextInt();
-                    keyboard.nextLine();
-
-
-                    System.out.println(bankFeaturesNav.remove(userInput).getFirstName() + " was removed");
-
-
+                    removeUser();
 
 
                 case 0:
@@ -105,7 +89,7 @@ public class user {
 
 
             System.out.println("Thank you for signing up in the budget tracker but there's currently a waiting list.");
-            System.out.println(waitingList.add(user) + "Was added to the waiting list.");
+            System.out.println(waitingList.add(user) + " Was added to the waiting list.");
 
 
         }
@@ -159,6 +143,58 @@ public class user {
         System.out.println("4. Add expense");
 
         System.out.println("0. Exit");
+
+
+    }
+
+    public void removeUser () {
+
+
+        for (int i = 0; i < bankFeaturesNav.size(); i++) {
+
+
+            System.out.println(i + ". : " + bankFeaturesNav.get(i).getFirstName());
+
+        }
+
+        System.out.println();
+        System.out.println("Enter the number of Who you would like to remove");
+
+        userInput = keyboard.nextInt();
+        keyboard.nextLine();
+
+
+        System.out.println(bankFeaturesNav.remove(userInput).getFirstName() + " was removed");
+
+        System.out.println("Would you like to add new users from the waiting list.");
+        System.out.println("Press 1 for YES ");
+        System.out.println("Press any button for NO ");
+        userInput = keyboard.nextInt();
+
+
+        if (userInput == 1) {
+
+            for (bankFeatures waitingUser : waitingList) {
+
+                System.out.println("The list of waiting users. " + waitingUser.getFirstName());
+
+            }
+
+            System.out.println(waitingList.peek().getFirstName() + " Was removed from the waiting list and move into the active list ");
+            bankFeaturesNav.add(waitingList.remove());
+
+
+
+        }
+
+        else {
+
+            return;
+        }
+
+
+
+
 
 
     }
