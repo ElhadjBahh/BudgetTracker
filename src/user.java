@@ -134,6 +134,9 @@ public class user {
 
     }
 
+
+
+
     public void UsermenuOptions () {
 
         System.out.println("Press the following numbers." );
@@ -146,6 +149,10 @@ public class user {
 
 
     }
+
+
+
+
 
     public void removeUser () {
 
@@ -189,7 +196,7 @@ public class user {
 
         else {
 
-            return;
+            System.out.println("Back to the main menu.");
         }
 
 
