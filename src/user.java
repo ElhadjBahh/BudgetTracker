@@ -125,6 +125,9 @@ public class user {
             System.out.println("Enter your client name: ");
             firstName = keyboard.nextLine();
 
+            System.out.println("Enter your client last name: ");
+            lastName = keyboard.nextLine();
+
             System.out.println("Enter your DOB: ");
             DOB = keyboard.nextInt();
 
@@ -134,6 +137,7 @@ public class user {
 
             bankFeatures user = new bankFeatures(firstName, lastName, DOB, startMoney);
             bankFeaturesNav.add(user);
+            System.out.println(user.firstName + " was added into the active list ");
 
         }
 
