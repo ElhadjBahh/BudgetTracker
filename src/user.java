@@ -71,8 +71,12 @@ public class user {
     public ArrayList<bankFeatures> newUser () {
 
 
-        System.out.println("Take control over your money - Enter your full name: ");
+        System.out.println("Take control over your money - Enter your first name: ");
         firstName = keyboard.nextLine();
+
+        System.out.println("Enter your last name: ");
+        lastName = keyboard.nextLine();
+
 
         System.out.println("Enter your DOB: ");
         DOB = keyboard.nextInt();
