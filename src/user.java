@@ -1,4 +1,4 @@
-import javax.xml.parsers.SAXParser;
+
 import java.util.*;
 
 public class user {
@@ -67,6 +67,7 @@ public class user {
 
     }
 
+
     public ArrayList<bankFeatures> newUser () {
 
 
@@ -85,11 +86,12 @@ public class user {
 
         bankFeatures user = new bankFeatures(firstName, lastName, DOB, startMoney);
 
-        if (bankFeaturesNav.size() > 3) {
+        if (bankFeaturesNav.size() > 1) {
 
 
             System.out.println("Thank you for signing up in the budget tracker but there's currently a waiting list.");
-            System.out.println(waitingList.add(user) + " Was added to the waiting list.");
+            waitingList.add(user);
+            System.out.println(user.getFirstName() +  " was added to the waiting list.");
 
 
         }
@@ -198,9 +200,6 @@ public class user {
 
             System.out.println("Back to the main menu.");
         }
-
-
-
 
 
 
