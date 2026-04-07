@@ -24,6 +24,7 @@ public class user {
             System.out.println("1. View all users ");
             System.out.println("2. Register user");
             System.out.println("3. Remove users");
+            System.out.println("4. View waiting list");
             System.out.println("0. Return to main menu");
 
 
@@ -51,6 +52,9 @@ public class user {
 
                     removeUser();
 
+                case 4:
+
+                    waitingList();
 
                 case 0:
                     return;
@@ -208,6 +212,36 @@ public class user {
 
             System.out.println("Back to the main menu.");
         }
+
+
+
+    }
+
+    public void waitingList () {
+
+
+       System.out.println( "The waiting list: " );
+
+       for (bankFeatures waitingLists: waitingList) {
+
+
+           System.out.println(waitingLists.firstName);
+       }
+
+       System.out.println("Do you want to add " + waitingList.peek().getFirstName() + " into the active list");
+       System.out.println("Press 1 for yes or any other button for no ");
+
+       userInput = keyboard.nextInt();
+
+       if (userInput == 1 ) {
+
+           System.out.println(waitingList.peek().getFirstName() + " was added to the active list");
+           bankFeaturesNav.add(waitingList.remove());
+
+       }
+
+
+
 
 
 
