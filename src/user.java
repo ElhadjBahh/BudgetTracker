@@ -118,9 +118,32 @@ public class user {
 
     public void returningUser () {
 
+        String currentUserInput;
+        System.out.println("Enter Your first name: ");
+        currentUserInput= keyboard.nextLine();
 
 
-    }
+        for (bankFeatures currentUsers: bankFeaturesNav) {
+
+
+            if (currentUserInput.equalsIgnoreCase(currentUsers.firstName)) {
+
+                System.out.println("Welcome back " + currentUsers.getFirstName());
+
+                UsermenuOptions();
+
+
+
+
+            }
+
+        }
+
+
+
+            }
+
+
 
     public void sysAdminNewUser () {
 
@@ -187,31 +210,8 @@ public class user {
 
         System.out.println(bankFeaturesNav.remove(userInput).getFirstName() + " was removed");
 
-        System.out.println("Would you like to add new users from the waiting list.");
-        System.out.println("Press 1 for YES ");
-        System.out.println("Press any button for NO ");
-        userInput = keyboard.nextInt();
-
-
-        if (userInput == 1) {
-
-            for (bankFeatures waitingUser : waitingList) {
-
-                System.out.println("The list of waiting users. " + waitingUser.getFirstName());
-
-            }
-
-            System.out.println(waitingList.peek().getFirstName() + " Was removed from the waiting list and move into the active list ");
-            bankFeaturesNav.add(waitingList.remove());
-
-
-
-        }
-
-        else {
 
             System.out.println("Back to the main menu.");
-        }
 
 
 
